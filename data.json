@@ -1,0 +1,56 @@
+{
+  "id": 12345,
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "age": 30,
+  "isVerified": true,
+  "preferences": {
+    "language": "English",
+    "notifications": {
+      "email": true,
+      "sms": false
+    }
+  },
+  "purchaseHistory": [
+    {
+      "orderId": "A001",
+      "date": "2025-01-12",
+      "amount": 49.99,
+      "items": [
+        {
+          "productId": "P1001",
+          "productName": "Wireless Mouse",
+          "quantity": 1
+        },
+        {
+          "productId": "P1002",
+          "productName": "Keyboard",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "orderId": "A002",
+      "date": "2025-01-10",
+      "amount": 19.99,
+      "items": [
+        {
+          "productId": "P1003",
+          "productName": "USB Cable",
+          "quantity": 2
+        }
+      ]
+    }
+  ],
+  "recentActivity": [
+    "Logged in",
+    "Viewed product: P1001",
+    "Added product: P1002 to cart"
+  ],
+  "accountCreated": "2023-09-05",
+  "lastLogin": "2025-01-12T14:35:00Z",
+  "subscription": {
+    "plan": "Premium",
+    "expires": "2025-12-31"
+  }
+}
