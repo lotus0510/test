@@ -1,0 +1,31 @@
+name: Run Crawler on Schedule
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每天的午夜 12 點執行
+  workflow_dispatch:  # 允許手動觸發
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest  # 在 Ubuntu 系統上運行
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install selenium
+          sudo apt-get install -y chromium-chromedriver
+          sudo apt install -y python3-dev
+          sudo apt install -y libssl-dev
+          sudo apt install -y libffi-dev
+
+      - name: Run the crawler
+        run: |
+          python crawler.py
